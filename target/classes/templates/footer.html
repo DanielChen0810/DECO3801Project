@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<!-- Use thymeleaf to add footer to other sites -->
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!-- info section -->
+<section class="info_section layout_padding" th:fragment="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="info_contact">
+                    <div class="info_logo">
+                        <a href="">
+                        <span>
+                        We Showed Up
+                        </span>
+                        </a>
+                    </div>
+                    <h5>
+                        <a style="color: #F56C6C;" class="nav-link" href="/contact">Contact Us</a>
+                    </h5>
+                    <div>
+                        <div class="img-box">
+                            <img src="images/location.png" width="18px" alt=""/>
+                        </div>
+                        <p>
+                            St. Lucia
+                        </p>
+                    </div>
+                    <div>
+                        <div class="img-box">
+                            <img src="images/phone.png" width="18px" alt=""/>
+                        </div>
+                        <p>
+                            +61 1234567890
+                        </p>
+                    </div>
+                    <div>
+                        <div class="img-box">
+                            <img src="images/envelope.png" width="18px" alt=""/>
+                        </div>
+                        <p>
+                            weshowedup@gmail.com
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4" style="width: 200px">
+                <img src="/images/we_showed_up_logo.png">
+            </div>
+
+            <div class="col-md-4" style="padding-left: 150px">
+                <div class="info_form ">
+                    <h5>
+                        Newsletter
+                    </h5>
+                    <form action="">
+                        <input type="email" placeholder="Enter your email"/>
+                        <button>
+                            Subscribe
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- end info_section -->
+<!-- footer section -->
+<section class="container-fluid footer_section">
+    <p>
+        Copyright &copy; 2020.Company name All rights reserved.<a target="_blank" href="http://sc.chinaz.com/moban/">&#x7F51;&#x9875;&#x6A21;&#x677F;</a>
+    </p>
+</section>
+<!-- footer section -->
+</body>
+</html>

@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<!-- @author Mujibul Islam Dipto, 44961374 -->
+<!-- This page is based on the template found at http://sc.chinaz.com/moban/200817503210.htm -->
+<!-- The template has been used to maintain a consistent structure but the design decisions
+and implementations have been made through multiple design iterations and testings. More
+specifically, the template has only provided the navigation style, the basic layout and
+and some responsiveness using bootstrap.
+of the page.  -->
+
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <title>About Us | We Showed Up</title>
+    <!-- slider stylesheet -->
+    <!-- slider stylesheet -->
+    <link rel="stylesheet" type="text/css" href="css/owl.carousel.min.css"/>
+    <!-- bootstrap core css -->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css"/>
+    <!-- fonts style -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet"/>
+    <!-- Custom styles for this template -->
+    <link href="css/aboutstyle.css" rel="stylesheet"/>
+    <!-- responsive style -->
+    <link href="css/responsive.css" rel="stylesheet"/>
+</head>
+
+<body>
+<div class="hero_area">
+    <!-- header section strats -->
+    <header class="header_section">
+        <div class="container-fluid">
+            <nav class="navbar navbar-expand-lg custom_nav-container ">
+                <a class="navbar-brand" href="index">
+                        <span>
+              We Showed Up
+            </span>
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <div class="d-flex ml-auto flex-column flex-lg-row align-items-center">
+                        <ul class="navbar-nav  ">
+                            <li class="nav-item ">
+                                <a class="nav-link" href="HomePage">Home
+                                    <span class="sr-only">(current)</span>
+                                </a>
+                            </li>
+                            <li class="nav-item active">
+                                <a style="color:#28a745" class="nav-link" href="about"> About </a>
+                            </li>
+                            <li class="nav-item ">
+                                <a class="nav-link" href="payment"> Donate </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="donation"> Charities </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="admin"> Admin</a>
+                            </li>
+                        </ul>
+                        <div class="user_option"></div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <!-- end header section -->
+</div>
+<!-- about section -->
+<section class="about_section layout_padding">
+    <div class="container" id="banner1">
+        <div class="heading_container">
+            <h2 id="headline">
+                Digitising Donations.
+            </h2>
+        </div>
+        <div class="box">
+            <div class="img-box"></div>
+            <div class="detail-box">
+                <p id="intro-message">
+                    We aim to provide a secure and transparent method of donating money to charities. Several charaties
+                    have signed up for our great cause and after you have made a donation, you can see exactly where
+                    your money has been spent!
+                </p>
+                <div class="btn-box">
+                    <a href="#0001">
+                        Learn More
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- end about section -->
+<!-- info regarding the underlying process -->
+<!-- This section requires further design research and some
+process diagrams to explain the system. -->
+<section id="process">
+    <div class="process-sections">
+        <div class="process-images">
+            <!-- free image from Photo by Logan Kirschner from Pexels -->
+            <img class="process-img" src="images/img11.png"
+                 style="width:90%; border-radius:20px 20px 20px 20px; margin: 6% 1% 6% 5%;">
+        </div>
+        <div class="process-images">
+            <!-- <img  class = "process-img" src="images/img2.png"  style="width:90%; border-radius:20px 20px 20px 20px; margin: 6% 1% 6% 5%;"> -->
+            <a href="donation">
+                <img id="0001" class="process-img" src="images/img22.gif"
+                     style="width:90%; border-radius:20px 20px 20px 20px; margin: 6% 1% 6% 5%;">
+            </a></div>
+        <div class="process-images">
+            <img class="process-img" src="images/img31.png"
+                 style="width:90%; border-radius:20px 20px 20px 20px; margin: 6% 1% 6% 5%;">
+        </div>
+    </div>
+    </br>
+    </br>
+    </br>
+    </br>
+    </br>
+    </br>
+    </br>
+    </br>
+    </br>
+    </br>
+    </br>
+    </br>
+    </br>
+    </br>
+    </br>
+    </br>
+    </br>
+    </br>
+    </br>
+    </br>
+    </br>
+    </br>
+    </br>
+</section>
+<div th:insert="footer :: footer"></div>
+<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.js"></script>
+<script type="text/javascript" src="js/owl.carousel.min.js"></script>
+<!-- owl carousel script
+-->
+<script type="text/javascript">
+        $(".owl-carousel").owlCarousel({
+            loop: true,
+            margin: 0,
+            navText: [],
+            center: true,
+            autoplay: true,
+            autoplayHoverPause: true,
+            responsive: {
+                0: {
+                    items: 1
+                },
+                1000: {
+                    items: 3
+                }
+            }
+        });
+
+</script>
+<!-- end owl carousel script -->
+</body>
+
+</html>

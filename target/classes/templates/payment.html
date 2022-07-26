@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>Payment</title>
+    <!-- Custom styles for this template -->
+    <link href="css/style.css" rel="stylesheet"/>
+    <!-- responsive style -->
+    <link href="css/responsive.css" rel="stylesheet"/>
+    <!--<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>-->
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!--<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>-->
+    <link rel="stylesheet" type="text/css" href="css/owl.carousel.min.css"/>
+    <!-- bootstrap core css -->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css"/>
+    <!-- fonts style -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet"/>
+    <!-- Custom styles for this template -->
+    <link href="css/aboutstyle.css" rel="stylesheet"/>
+    <!-- responsive style -->
+    <link href="css/responsive.css" rel="stylesheet"/>
+</head>
+
+
+<body>
+<div class="hero_area">
+    <!-- header section strats -->
+    <header class="header_section">
+        <div class="container-fluid">
+            <nav class="navbar navbar-expand-lg custom_nav-container ">
+                <a class="navbar-brand" href="">
+                        <span>
+              We Showed Up
+            </span>
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <div class="d-flex ml-auto flex-column flex-lg-row align-items-center">
+                        <ul class="navbar-nav  ">
+                            <li class="nav-item ">
+                                <a class="nav-link" href="HomePage">Home </span></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="about"> About </a>
+                            </li>
+                            <li class="nav-item active">
+                                <a style="color:#28a745" class="nav-link" href="payment"> Donate <span class="sr-only">(current)</span></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="donation"> Charities </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="Personal"> Admin</a>
+                            </li>
+                        </ul>
+                        <div class="user_option">
+
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <!-- end header section -->
+</div>
+<br>
+<section id="contact" style="">
+    <div class="container">
+        <h1>Donate</h1>
+        <div class="row">
+            <div class="col-md-6">
+                <form class="contact-form" action="/payment/complete">
+                    <div class="form-group">
+                        <label for="charity">Choose a charity:</label>
+                        <select name="charity" id="charity" class="custom-select">
+                            <option value="disaster">Disaster Relief</option>
+                            <option value="nature">Nature Preservation</option>
+                            <option value="elderly">Help the elderly and orphans</option>
+                            <option value="disabled">Assist the Disabled</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="name">Full name</label>
+                        <input type="text" class="form-control" placeholder="John D'souza" name="name"
+                               value="anonymous">
+                    </div>
+                    <div class="form-group">
+                        <label for="Card_number">Card number</label>
+                        <input type="number" class="form-control" placeholder="XXXXXXXXXXXXxxxx" name="Card_number">
+                    </div>
+                    <div class="form-group">
+                        <label for="CVV">CVV</label>
+                        <input type="number" class="form-control" placeholder="123" name="CVV">
+                    </div>
+                    <div class="form-group">
+                        <label for="amount">Amount</label>
+                        <input type="number" class="form-control" placeholder="$10" name="amount">
+                    </div>
+                    <div class="form-group">
+                        <label for="Expiry">Expiry date</label>
+                        <input type="month" id="Expiry" name="Expiry">
+                        <!-- month type-->
+                        <input type="submit" class="btn btn-success" value="Submit"><br><br>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+<div th:insert="footer :: footer"></div>
+</body>
+<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+
+
+</html>

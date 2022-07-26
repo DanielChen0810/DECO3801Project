@@ -1,0 +1,150 @@
+<!-- Xinming Zhang, 44704487 -->
+<!-- This web page is based on an online template. The main ones are those that use the template outline 
+    The content of the main page is self-generated  -->
+
+
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<title>Submitted</title>
+<head>
+    <!-- Basic -->
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <!-- Mobile Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <!-- Site Metas -->
+    <meta name="keywords" content=""/>
+    <meta name="description" content=""/>
+    <meta name="author" content=""/>
+
+    <!-- slider stylesheet -->
+    <!-- slider stylesheet -->
+    <link rel="stylesheet" type="text/css"
+          href="css/owl.carousel.min.css"/>
+
+    <!-- bootstrap core css -->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css"/>
+
+    <!-- fonts style -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet"/>
+    <!-- Custom styles for this template -->
+    <link href="css/style.css" rel="stylesheet"/>
+    <!-- responsive style -->
+    <link href="css/responsive.css" rel="stylesheet"/>
+</head>
+<body>
+<div class="hero_area">
+    <!-- header section strats -->
+    <header class="header_section">
+        <div class="container-fluid">
+            <nav class="navbar navbar-expand-lg custom_nav-container ">
+                <a class="navbar-brand" href="">
+                    <span>
+                      We Showed Up
+                    </span>
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                        data-target="#navbarSupportedContent"
+                        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <div class="d-flex ml-auto flex-column flex-lg-row align-items-center">
+                        <ul class="navbar-nav  ">
+                            <li class="nav-item ">
+                                <a class="nav-link" href="">Home <span class="sr-only"></span></a>
+                            </li>
+                            <li class="nav-item ">
+                                <a class="nav-link" href="about.html"> About </a>
+                            </li>
+                            <li class="nav-item ">
+                                <a class="nav-link" href=""> Donate </a>
+                            </li>
+                            <li class="nav-item active">
+                                <a class="nav-link" href="Donation.html"> Charities </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href=""> Admin</a>
+                            </li>
+                        </ul>
+                        <div class="user_option">
+                            <input class="form-control header-input" type="text" placeholder="Search"
+                                   aria-label="Search">
+                            <form class="form-inline my-2 my-lg-0 ml-0 ml-lg-4 mb-3 mb-lg-0">
+                                <button class="btn  my-2 my-sm-0 nav_search-btn" type="submit"></button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <!-- end header section -->
+
+</div>
+
+<!-- form section -->
+<div class="comment-form my-5 pt-5">
+    <h2 style="font-size: 300%; font-weight: bold; color: black; max-width: 800px; margin: 40px auto;">Thank you for
+        your attention. You have filled in the information successfully. We will reply you as soon as possible.</h2>
+
+</div>
+
+
+<!-- end form section -->
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Confirmation</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                Do you want to donate this project?
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-warning" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-success">Donate</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div th:insert="footer :: footer"></div>
+<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.js"></script>
+<script type="text/javascript" src="js/owl.carousel.min.js">
+</script>
+<!-- owl carousel script
+    -->
+<script type="text/javascript">
+            $(".owl-carousel").owlCarousel({
+            loop: true,
+            margin: 0,
+            navText: [],
+            center: true,
+            autoplay: true,
+            autoplayHoverPause: true,
+            responsive: {
+                0: {
+                items: 1
+                },
+                1000: {
+                items: 3
+                }
+            }
+            });
+
+</script>
+<!-- end owl carousel script -->
+
+
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE HTML>
+
+<!-- Author: Mujibul  -->
+
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>Donation successful!</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link href="/css/sucessstyle.css" type="text/css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet"/>
+</head>
+
+
+<body>
+<!-- Free icon from http://clipart-library.com/ -->
+<img src="/images/check.png" style="margin-top: 5%" class="center" ;>
+<p id="confirmation">Thank you for donating! </p>
+<p class="message">Here's your donation information:</p>
+<p class="message" th:text="${donationString}"/>
+<p></p>
+<a class="nav-link" style="display: block;margin-left: auto; margin-right: auto; font-size: 25px;" href="/donation">
+    Click here to go back </a>
+</body>
+
+</html>

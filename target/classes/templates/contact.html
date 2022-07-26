@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<!-- @author Xinming Zhang, 44704487 -->
+<!-- This page is based on the template found at http://sc.chinaz.com/moban/200817503210.htm -->
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <title>contact</title>
+    <title>my website</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!--<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>-->
+    <link rel="stylesheet" type="text/css" href="css/owl.carousel.min.css"/>
+    <!-- bootstrap core css -->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css"/>
+    <!-- fonts style -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet"/>
+    <!-- Custom styles for this template -->
+    <link href="css/aboutstyle.css" rel="stylesheet"/>
+    <!-- responsive style -->
+    <link href="css/responsive.css" rel="stylesheet"/>
+</head>
+<style>
+    .contact-info{
+        position: relative;
+        left: 50px;
+        font-size: 16px;
+        top: 20px;
+    }
+
+</style>
+<body>
+
+<div class="hero_area">
+    <!-- header section strats -->
+    <header class="header_section">
+        <div class="container-fluid">
+            <nav class="navbar navbar-expand-lg custom_nav-container ">
+                <a class="navbar-brand" href="index">
+                        <span>
+              We Showed Up
+            </span>
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <div class="d-flex ml-auto flex-column flex-lg-row align-items-center">
+                        <ul class="navbar-nav  ">
+                            <li class="nav-item ">
+                                <a class="nav-link" href="HomePage">Home
+                                    <span class="sr-only">(current)</span>
+                                </a>
+                            </li>
+                            <li class="nav-item active">
+                                <a style="color:#28a745" class="nav-link" href="about"> About </a>
+                            </li>
+                            <li class="nav-item ">
+                                <a class="nav-link" href="payment"> Donate </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="donation"> Charities </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="admin"> Admin</a>
+                            </li>
+                        </ul>
+                        <div class="user_option"></div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <!-- end header section -->
+</div>
+
+<section id="contact">
+    <br>
+    <div class="container">
+        <h1>Get In Touch</h1>
+        <div class="row">
+            <div class="col-md-6">
+                <form class="contact-f orm" action="connect.php" method="post">
+                    <div class="form-group">
+                        <label for="your name">Your Name</label>
+                        <input type="text" class="form-control" placeholder="Your Name" name="NAME">
+                    </div>
+                    <div class="form-group">
+                        <label for="Phone no.">Phone</label>
+                        <input type="number" class="form-control" placeholder="PHONE" name="PHONE">
+                    </div>
+                    <div class="form-group">
+                        <label for="Email">E-mail id</label>
+                        <input type="text" class="form-control" placeholder="EMAIL" name="EMAIL">
+                    </div>
+                    <div class="form-group">
+                        <label for="Your message">Message</label>
+                        <textarea class="form-control" rows="4" placeholder="MESSAGE" name="MESSAGE"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">SEND MESSAGE</button>
+                    <br>
+                </form>
+            </div>
+            <div class="col-md-6 contact-info">
+                <div class="follow"><b>Address:&nbsp;</b><i class="fa fa-map-marker"></i> XYZ Road,kolkata,IN</div>
+                <div class="follow"><b>Phone:&nbsp;&nbsp;</b><i class="fa fa-phone"></i> +91 1122334455</div>
+                <div class="follow"><b>Email:&nbsp;&nbsp;</b><i class="fa fa-envelope-o"></i> example@website.com</div>
+                <div class="follow"><label><b>Get Social:</b></label>
+                    <a href="#"><i class="fa fa-facebook"></i></a>
+                    <a href="#"><i class="fa fa-youtube-play"></i></a>
+                    <a href="#"><i class="fa fa-twitter"></i></a>
+                    <a href="#"><i class="fa fa-google-plus"></i></a>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+
+</section>
+<br>
+<div th:insert="footer :: footer"></div>
+<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.js"></script>
+<script type="text/javascript" src="js/owl.carousel.min.js"></script>
+
+</body>
+
+</html>

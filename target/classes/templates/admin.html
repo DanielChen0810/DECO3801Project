@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<title>Admin</title>
+
+<head>
+    <!-- Basic -->
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <!-- Mobile Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <!-- Site Metas -->
+    <meta name="keywords" content=""/>
+    <meta name="description" content=""/>
+    <meta name="author" content=""/>
+
+    <!-- slider stylesheet -->
+    <!-- slider stylesheet -->
+    <link rel="stylesheet" type="text/css" href="css/owl.carousel.min.css"/>
+
+    <!-- bootstrap core css -->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css"/>
+
+    <!-- fonts style -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet"/>
+    <!-- Custom styles for this template -->
+    <link href="css/style.css" rel="stylesheet"/>
+    <!-- responsive style -->
+    <link href="css/responsive.css" rel="stylesheet"/>
+
+    <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+
+
+</head>
+
+<body>
+<div class="hero_area">
+    <!-- header section strats -->
+    <header class="header_section">
+        <div class="container-fluid">
+            <nav class="navbar navbar-expand-lg custom_nav-container ">
+                <a class="navbar-brand" href="">
+                        <span>
+                      We Showed Up
+                    </span>
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <div class="d-flex ml-auto flex-column flex-lg-row align-items-center">
+                        <ul class="navbar-nav  ">
+                            <li class="nav-item ">
+                                <a class="nav-link" href="HomePage">Home
+                                    <span class="sr-only">(current)</span>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="about"> About </a>
+                            </li>
+                            <li class="nav-item ">
+                                <a class="nav-link" href="payment"> Donate </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="donation"> Charities </a>
+                            </li>
+                            <li class="nav-item active">
+                                <a style="color:#28a745" class="nav-link" href="admin"> Admin</a>
+                            </li>
+                        </ul>
+                        <div class="user_option"></div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <!-- end header section -->
+
+</div>
+
+<!-- form section -->
+<div class="comment-form">
+    <h1 style="font-size: 400%; font-weight: bold;background-color: #30AE69;color: white;line-height: 180px;
+        height: 180px;text-align: center;">Admin</h1>
+    <!--<hr class="ml-0" style="font-weight: 2;border: 2px solid #ccc; border-collapse: collapse;" />-->
+
+    <br>
+    <br>
+
+    <h1 style="font-size: 120%; font-weight: bold;text-align: center;">Update your Spending</h1>
+    <div class="row">
+
+        <div class="col-md-5" style="margin: 10px auto">
+            <form class="contact-form" action="/admin/update">
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Transaction ID" id="trans-id" name="id">
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Amount" id="amount" name="amount">
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Description" id="description"
+                           name="description">
+                </div>
+                <div class="form-group">
+
+
+                </div>
+            </form>
+            <button class="btn btn-success admin-button" id="submit-btn">Submit</button>
+
+
+        </div>
+
+        <table align="center" border="1" width="1350">
+            <tr>
+                <th width="40%">Payment ID</th>
+                <th width="10%">Amount</th>
+                <th width="50%">Description</th>
+            </tr>
+
+            <tr th:each="donation : ${donations}">
+                <td th:text="${donation.id}"></td>
+                <td th:text="${donation.amount}"></td>
+                <td th:text="${donation.description}"></td>
+
+            </tr>
+
+        </table>
+    </div>
+    <br>
+</div>
+
+
+<!-- end form section -->
+
+<div th:insert="footer :: footer"></div>
+<!-- owl carousel script
+    -->
+<script type="text/javascript">
+        $(".owl-carousel").owlCarousel({
+            loop: true,
+            margin: 0,
+            navText: [],
+            center: true,
+            autoplay: true,
+            autoplayHoverPause: true,
+            responsive: {
+                0: {
+                    items: 1
+                },
+                1000: {
+                    items: 3
+                }
+            }
+        });
+
+</script>
+<script>
+        console.log("xddd");
+
+</script>
+
+<script>
+        console.log("Starting");
+        $('#submit-btn').click(function() {
+            console.log("Button Click");
+
+
+            $.ajax({
+                url: 'admin/update',
+                type: 'GET',
+                data: {
+                    id: $('#trans-id').val(),
+                    amount: $('#amount').val(),
+                    description: $('#description').val()
+                }
+            });
+        });
+
+</script>
+
+<!-- end owl carousel script -->
+
+
+</body>
+
+</html>
