@@ -1,0 +1,5 @@
+The login information for each charity is their role with a _user or _pw suffix.
+E.g
+For the disaster charity:
+username: disaster_user
+password: disaster_pw
